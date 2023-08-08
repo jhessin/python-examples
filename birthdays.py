@@ -6,7 +6,7 @@ birthdays = {
 
 while True:
     print('Enter a name: (blank to quit)')
-    name = input()
+    name: str = input()
     if name == '':
         break
 

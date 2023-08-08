@@ -6,7 +6,7 @@ tableData = [
         ['dogs', 'cats', 'moose', 'goose'],
         ]
 
-def printTable(table):
+def printTable(table: list[list[str]]):
     columns = len(table)
     rows = len(table[0])
 

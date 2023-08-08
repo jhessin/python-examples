@@ -1,4 +1,4 @@
-def collatz(number):
+def collatz(number: int):
     if number % 2 == 0:
         value = number // 2
         print(value)
@@ -8,7 +8,7 @@ def collatz(number):
         print(value)
         return value
 
-def collatzSequence(number):
+def collatzSequence(number: int):
     while((number) != 1):
         number = collatz(number)
 

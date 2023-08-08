@@ -6,7 +6,7 @@ inventory = {
         'arrow': 12,
         }
 
-def displayInventory(inv):
+def displayInventory(inv: dict[str, int]):
     print('Inventory:')
     sum = 0
     for k, v in inv.items():
@@ -15,7 +15,7 @@ def displayInventory(inv):
     print()
     print('Total number of items:', sum)
 
-def addToInventory(inv, addedItems):
+def addToInventory(inv: dict[str, int], addedItems: list[str]):
     for item in addedItems:
         inv.setdefault(item, 0)
         inv[item] += 1

@@ -1,4 +1,4 @@
-def commaCode(someList):
+def commaCode(someList: list[str]):
     result = ''
     for i in range(len(someList)):
         if i == len(someList) - 1:
@@ -7,7 +7,7 @@ def commaCode(someList):
             result += someList[i] + ', '
     return result
 
-def characterPictureGrid(grid):
+def characterPictureGrid(grid: list[list[str]]):
     x = 0
     y = 0
     while y < len(grid[x]):

@@ -1,4 +1,4 @@
-def spam(x):
+def spam(x: int):
     try:
         return 42 / x
     except ZeroDivisionError:

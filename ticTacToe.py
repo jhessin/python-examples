@@ -5,7 +5,7 @@ theBoard = {
         'low-L': ' ', 'low-M': ' ', 'low-R': ' ',
         }
 
-def printBoard(board):
+def printBoard(board: dict[str, str]):
     print(board['top-L'] + '|' + board['top-M'] + '|' + board['top-R'])
     print('-+-+-')
     print(board['mid-L'] + '|' + board['mid-M'] + '|' + board['mid-R'])

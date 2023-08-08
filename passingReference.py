@@ -1,4 +1,4 @@
-def eggs(someParameter):
+def eggs(someParameter: list):
     someParameter.append('Hello')
 
 spam = [1, 2, 3]
