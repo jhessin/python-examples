@@ -1,0 +1,1 @@
+@pyw.exe .\mcb.pyw %*
