@@ -1,0 +1,37 @@
+#! python3
+
+from pprint import pprint
+from requests import get
+
+
+def parse_input(prompt: str):
+    name = input(prompt)
+    return name.lower()
+
+
+def show_pokemon(obj: dict):
+    pprint(obj)
+
+
+def main():
+    while True:
+        # 1. Ask for user input -> i.e. ditto
+        pokemon_name = parse_input(
+            'What Pokemon would you like to know about? (blank to exit)')
+        if not pokemon_name:
+            break
+        # 2. create a dynamic URL based on step 1
+        url = f'https://pokeapi.co/api/v2/pokemon/{pokemon_name}'
+        # 3. Fetch the data from the url
+        r = get(url)
+        if r.status_code != 200:
+            print(f"{pokemon_name} is not a pokemon! Try again...")
+            continue
+        # 4. Convert JSON to a dictionary
+        pokemon_data = r.json()
+        # 5. Print out pokemon data
+        show_pokemon(pokemon_data)
+
+
+if __name__ == '__main__':
+    main()
