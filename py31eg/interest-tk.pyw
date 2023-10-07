@@ -68,14 +68,14 @@ class MainWindow(tkinter.Frame):
 
         principalScale.focus_set()
         self.updateUi()
-        parent.bind("<Alt-p>", lambda *ignore: principalScale.focus_set())
-        parent.bind("<Alt-r>", lambda *ignore: rateScale.focus_set())
-        parent.bind("<Alt-y>", lambda *ignore: yearsScale.focus_set())
+        parent.bind("<Alt-p>", lambda *_: principalScale.focus_set())
+        parent.bind("<Alt-r>", lambda *_: rateScale.focus_set())
+        parent.bind("<Alt-y>", lambda *_: yearsScale.focus_set())
         parent.bind("<Control-q>", self.quit)
         parent.bind("<Escape>", self.quit)
 
 
-    def updateUi(self, *ignore):
+    def updateUi(self, *_):
         amount = self.principal.get() * (
                  (1 + (self.rate.get() / 100.0)) ** self.years.get())
         self.amount.set("{0:.2f}".format(amount))
